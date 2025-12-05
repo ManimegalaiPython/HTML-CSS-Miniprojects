@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            background: #f3f4f6;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        /* Main grid container */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Product card */
+        .product-card {
+            background: #fff;
+            width: 300px;
+            padding: 18px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s ease;
+        }
+
+        /* Hover effect */
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Bigger card for featured */
+        .featured {
+            flex-grow: 1;
+        }
+
+        /* Product image box */
+        .product-img {
+            width: 100%;
+            height: 180px;
+            border-radius: 12px;
+            background: #fff;
+            overflow: hidden;
+            margin-bottom: 18px;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        small {
+            font-size: 12px;
+            color: #777;
+        }
+
+        h4 {
+            margin: 10px 0 6px;
+            font-size: 18px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+        }
+
+        .price {
+            color: #e63946;
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .product-card,
+            .featured {
+                width: 100%;
+                flex-grow: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Our Products</h2>
+
+    <div class="product-container">
+
+        <!-- Featured Product -->
+        <div class="product-card featured">
+            <div class="product-img">
+                <img src="head.jpg" alt="Headphones">
+            </div>
+            <small>Featured Product</small>
+            <h4>Premium Headphones</h4>
+            <p>Experience crystal clear sound with noise cancellation.</p>
+            <div class="price">₹1999</div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="earpads.avif" alt="Earbuds">
+            </div>
+            <small>Product 1</small>
+            <h4>Wireless Earbuds</h4>
+            <p>Compact design with powerful bass.</p>
+            <div class="price">₹799</div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="smart.jpg">
+            </div>
+            <small>Product 2</small>
+            <h4>Smart Watch</h4>
+            <p>Track health, alerts, and fitness goals.</p>
+            <div class="price">₹1499</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

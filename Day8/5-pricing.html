@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        /* ---- Pricing Container ---- */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* ---- Pricing Box ---- */
+        .pricing-box {
+            width: 300px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        /* Hover Scale */
+        .pricing-box:hover {
+            transform: scale(1.07);
+            box-shadow: 0px 8px 18px rgba(0,0,0,0.2);
+        }
+
+        .pricing-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #ff6600;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 25px;
+            border: none;
+            background: #ff6600;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #e55b00;
+        }
+
+        /* ---- Highlight Middle Plan ---- */
+        .highlight {
+            flex-grow: 1.2;
+            background: linear-gradient(to bottom right, #ff9f43, #ff6b6b);
+            color: white;
+            box-shadow: 0px 8px 18px rgba(255, 100, 50, 0.4);
+        }
+
+        .highlight .price {
+            color: white;
+        }
+
+        .highlight button {
+            background: #fff;
+            color: #ff5733;
+        }
+        .highlight button:hover {
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Pricing Plans</h1>
+
+    <div class="pricing-container">
+
+        <!-- Basic Plan -->
+        <div class="pricing-box">
+            <div class="pricing-title">Basic</div>
+            <div class="price">₹499</div>
+            <ul>
+                <li>✔ 5 Projects</li>
+                <li>✔ Email Support</li>
+                <li>✔ Basic Features</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+
+        <!-- Pro Plan (Highlighted) -->
+        <div class="pricing-box highlight">
+            <div class="pricing-title">Pro</div>
+            <div class="price">₹999</div>
+            <ul>
+                <li>✔ 15 Projects</li>
+                <li>✔ Priority Support</li>
+                <li>✔ Advanced Features</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="pricing-box">
+            <div class="pricing-title">Premium</div>
+            <div class="price">₹1999</div>
+            <ul>
+                <li>✔ Unlimited Projects</li>
+                <li>✔ 24/7 Support</li>
+                <li>✔ All Features</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

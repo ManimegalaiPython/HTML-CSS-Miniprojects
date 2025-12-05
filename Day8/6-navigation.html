@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Navbar</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ---- Navbar ---- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;   /* Logo left, links center, button right */
+            align-items: center;
+            background: #ffffff;
+            padding: 15px 40px;
+            box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+            flex-wrap: wrap;   /* Responsive */
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ff6600;
+        }
+
+        /* Nav links container */
+        .nav-links {
+            display: flex;
+            gap: 30px;   /* space between links */
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff6600;
+        }
+
+        /* Button on right */
+        .nav-btn {
+            padding: 10px 20px;
+            background: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #e25800;
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">MyBrand</div>
+
+        <!-- Links -->
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Button -->
+        <button class="nav-btn">Login</button>
+    </nav>
+
+</body>
+</html>
