@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Card Showcase</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #f2f2f2;
+            padding: 40px;
+        }
+
+        /* Heading */
+        .title-box {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            color: white;
+            border-radius: 12px;
+            max-width: 700px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        .title-box h1 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        /* Card Grid */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 310px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+            transition: 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .card h2 {
+            margin-top: 15px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .card p {
+            margin: 10px 0 18px;
+            color: #666;
+            font-size: 15px;
+        }
+
+        .card button {
+            padding: 10px 22px;
+            border: none;
+            font-size: 14px;
+            background: #ff4b2b;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .card button:hover {
+            background: #d83a22;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="title-box">
+        <h1>Modern Card Showcase</h1>
+    </div>
+
+    <div class="card-container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg">
+            <h2>Creative Design</h2>
+            <p>Explore modern and aesthetic card designs for your upcoming projects.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg">
+            <h2>Business Strategy</h2>
+            <p>Discover business insights, growth ideas, and strategic methods.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg">
+            <h2>Travel & Adventure</h2>
+            <p>Find amazing travel locations and adventure ideas around the world.</p>
+            <button>Learn More</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

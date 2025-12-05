@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog Layout</title>
+
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #f0f4f8;
+            padding-bottom: 40px;
+        }
+
+        /* Project Title */
+        .project-title {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 26px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* Main Blog Title */
+        .main-title {
+            text-align: center;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            padding: 25px;
+            font-size: 34px;
+            font-weight: 700;
+            color: white;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        /* Blog Card Layout */
+        .blog-post {
+            width: 80%;
+            max-width: 850px;
+            background: #ffffff;
+            padding: 25px;
+            margin: 25px auto;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        /* Post Title */
+        .post-title {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Post Content */
+        .post-content {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 18px 0;
+            font-size: 15px;
+            margin-top: 35px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Project Label -->
+    <h1 class="project-title">Mini Project 3 : Blog Post Layout</h1>
+
+    <!-- Blog Title -->
+    <h1 class="main-title">My Modern Blog</h1>
+
+    <!-- Blog Post 1 -->
+    <div class="blog-post">
+        <h2 class="post-title">The Future of Web Design</h2>
+        <p class="post-content">
+            Web design continues to evolve with new trends, powerful tools, and modern user experiences.
+            Clean layouts, minimal UI, and responsive elements are becoming essential components of every website.
+        </p>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div class="blog-post">
+        <h2 class="post-title">Why Flexbox Makes Layouts Easier</h2>
+        <p class="post-content">
+            Flexbox simplifies alignment, spacing, and responsive behavior. It allows developers to create
+            structured and flexible layouts without using floats or complicated CSS hacks.
+        </p>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="blog-post">
+        <h2 class="post-title">Boost Your CSS Skills</h2>
+        <p class="post-content">
+            Mastering CSS properties such as shadows, gradients, margins, paddings, and animations can take your
+            front-end designs to the next level. Practice with small mini projects to improve faster.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2025 My Modern Blog. All rights reserved.
+    </footer>
+
+</body>
+</html>

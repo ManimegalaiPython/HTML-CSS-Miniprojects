@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #f7f7f7;
+        }
+
+        /* Gradient Header */
+        .header {
+            background: linear-gradient(135deg, #4a90e2, #8e44ad);
+            padding: 50px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about-section {
+            max-width: 1100px;
+            margin: 50px auto;
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+        }
+
+        .about-text {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .about-text h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .about-img {
+            flex: 1;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            border: 2px solid #eee;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            max-width: 1100px;
+            margin: 30px auto 60px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+        }
+
+        .mission-section h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #444;
+            font-weight: 600;
+        }
+
+        .mission-section p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Gradient Header -->
+    <div class="header">
+        <h1>About Our Company</h1>
+    </div>
+
+    <!-- 2 Column About Section -->
+    <div class="about-section">
+        <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>
+                We are a passionate team dedicated to delivering high-quality products 
+                and creating meaningful experiences for our customers. Our company 
+                believes in innovation, integrity, and complete customer satisfaction.
+            </p>
+        </div>
+
+        <div class="about-img">
+            <img src="company.jpg" alt="Company Image">
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="mission-section">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to build innovative solutions that empower individuals 
+            and businesses worldwide. We are committed to continuous growth, 
+            excellence, and customer-centric service that makes a real impact.
+        </p>
+    </div>
+
+</body>
+</html>

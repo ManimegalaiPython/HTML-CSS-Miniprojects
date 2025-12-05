@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Comparison Table</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+        }
+
+        .table-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        th {
+            background-color: #4a90e2;
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            border: 1px solid #d7d7d7;
+        }
+
+        td {
+            padding: 14px;
+            border: 1px solid #ddd;
+            font-size: 15px;
+        }
+
+        /* Row hover effect */
+        tr:hover td {
+            background: #f3faff;
+            transition: 0.3s;
+        }
+
+        /* Highlight differences */
+        .highlight {
+            background-color: #fdeaea; /* light soft red */
+        }
+
+        .highlight-alt {
+            background-color: #e8fbe8; /* light soft green */
+        }
+
+        /* Rounded corners for full table */
+        table tr:first-child th:first-child {
+            border-top-left-radius: 10px;
+        }
+        table tr:first-child th:last-child {
+            border-top-right-radius: 10px;
+        }
+        table tr:last-child td:first-child {
+            border-bottom-left-radius: 10px;
+        }
+        table tr:last-child td:last-child {
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <h2>Product Feature Comparison</h2>
+
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Product A</th>
+                <th>Product B</th>
+            </tr>
+
+            <tr>
+                <td>Price</td>
+                <td class="highlight">$199</td>
+                <td class="highlight-alt">$249</td>
+            </tr>
+
+            <tr>
+                <td>Storage</td>
+                <td>128 GB</td>
+                <td class="highlight">256 GB</td>
+            </tr>
+
+            <tr>
+                <td>Battery</td>
+                <td class="highlight-alt">4000 mAh</td>
+                <td>3500 mAh</td>
+            </tr>
+
+            <tr>
+                <td>Warranty</td>
+                <td>1 Year</td>
+                <td>1 Year</td>
+            </tr>
+
+        </table>
+    </div>
+
+</body>
+</html>
