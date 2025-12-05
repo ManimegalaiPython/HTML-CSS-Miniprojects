@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Pricing Table</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        /* Flex container */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;        /* Space between cards */
+            flex-wrap: wrap;
+        }
+
+        /* Pricing Card */
+        .pricing-card {
+            background: #fff;
+            width: 280px;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .pricing-card ul li {
+            margin: 6px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 6px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #555;
+        }
+
+        /* Highlighted Card */
+        .highlight {
+            background: linear-gradient(135deg, #ff865b, #ff513b);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .highlight .btn {
+            background: white;
+            color: #ff513b;
+        }
+
+        .highlight .btn:hover {
+            background: #ffe4dc;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Our Pricing Plans</h1>
+
+    <div class="pricing-container">
+
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+            <h2>Basic</h2>
+            <p class="price">$19/mo</p>
+            <ul>
+                <li>✔ 5 Projects</li>
+                <li>✔ Basic Support</li>
+                <li>✔ 1 GB Storage</li>
+            </ul>
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+        <!-- Highlighted Pro Plan -->
+        <div class="pricing-card highlight">
+            <h2>Pro</h2>
+            <p class="price">$39/mo</p>
+            <ul>
+                <li>✔ 20 Projects</li>
+                <li>✔ Priority Support</li>
+                <li>✔ 10 GB Storage</li>
+            </ul>
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="pricing-card">
+            <h2>Premium</h2>
+            <p class="price">$59/mo</p>
+            <ul>
+                <li>✔ Unlimited Projects</li>
+                <li>✔ 24/7 Support</li>
+                <li>✔ 50 GB Storage</li>
+            </ul>
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

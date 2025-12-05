@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f7f7f7;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Gallery Flexbox */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;     /* Allows images to move to next row */
+            justify-content: center;
+            gap: 20px;           /* Spacing between images */
+        }
+
+        .gallery img {
+            width: 250px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Flexbox Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="image1.jpg" alt="">
+        <img src="image2.jpg" alt="">
+        <img src="image3.jpg" alt="">
+        <img src="image5.jpg" alt="">
+        <img src="image6.jpg" alt="">
+        <img src="image7.jpg" alt="">
+        <img src="company.jpg" alt="">
+        <img src="pr3.webp" alt="">
+    </div>
+
+</body>
+</html>
