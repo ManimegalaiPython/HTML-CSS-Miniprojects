@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floating Action Button</title>
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            height: 200vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #eef2f3, #d9e2ec);
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        /* =========================
+           FAB CONTAINER
+        ========================= */
+        .fab-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* MAIN BUTTON */
+        .fab-main {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #ff4081;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .fab-main:hover {
+            background: #e91e63;
+        }
+
+        /* MENU BUTTONS */
+        .fab-menu {
+            position: absolute;
+            bottom: 70px;
+            right: 5px;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .fab-item {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: none;
+            background: white;
+            color: #ff4081;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-size: 22px;
+        }
+
+        .fab-item:hover {
+            background: #ff4081;
+            color: white;
+        }
+
+        /* SHOW MENU */
+        .fab-container.active .fab-menu {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Floating Action Button</h2>
+    <p style="text-align:center;">Click the + button at bottom right</p>
+
+    <!-- =========================
+         FAB SECTION
+    ========================= -->
+    <div class="fab-container" id="fabBox">
+
+        <div class="fab-menu">
+            <button class="fab-item">
+                <span class="material-icons">call</span>
+            </button>
+
+            <button class="fab-item">
+                <span class="material-icons">chat</span>
+            </button>
+
+            <button class="fab-item">
+                <span class="material-icons">mail</span>
+            </button>
+        </div>
+
+        <button class="fab-main" onclick="toggleFab()">
+            <span class="material-icons">add</span>
+        </button>
+    </div>
+
+    <script>
+        function toggleFab() {
+            document.getElementById("fabBox").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

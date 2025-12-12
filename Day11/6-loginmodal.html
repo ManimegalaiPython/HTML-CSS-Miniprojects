@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Project 6 - Login Modal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    background:#f4f4f4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Hide checkbox */
+#toggle{
+    display:none;
+}
+
+/* ================= OPEN BUTTON ================= */
+.open-btn{
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+/* ================= OVERLAY ================= */
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    z-index:10;
+    display:none;
+}
+
+/* ================= MODAL ================= */
+.modal{
+    position:fixed;             /* REQUIRED */
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0.7);
+    width:350px;
+    background:white;
+    border-radius:12px;
+    padding:25px 25px 35px;
+    z-index:20;                 /* REQUIRED */
+    display:none;
+    transition:0.3s ease;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.close-btn{
+    position:absolute;          /* REQUIRED */
+    top:10px;
+    right:15px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* ================= FORM ================= */
+.modal h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.modal input{
+    width:100%;
+    padding:10px;
+    margin-bottom:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.modal button{
+    width:100%;
+    padding:10px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* ================= TOGGLE USING CSS ================= */
+#toggle:checked ~ .overlay{
+    display:block;
+}
+
+#toggle:checked ~ .modal{
+    display:block;
+    transform:translate(-50%,-50%) scale(1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Toggle Control -->
+<input type="checkbox" id="toggle">
+
+<!-- Open Button -->
+<label for="toggle" class="open-btn">Open Login</label>
+
+<!-- Overlay -->
+<label for="toggle" class="overlay"></label>
+
+<!-- Modal -->
+<div class="modal">
+    <label for="toggle" class="close-btn">×</label>
+
+    <h2>Login</h2>
+
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <button>Login</button>
+</div>
+
+</body>
+</html>

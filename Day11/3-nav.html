@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation Bar</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sticky Navigation Bar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: #13B82E; /* Green color */
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .sticky-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .sticky-nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .sticky-nav ul li a:hover {
+            color: #DCFF16; /* Highlight color */
+        }
+
+        /* Sections */
+        .section {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Different Background Colors for Sections */
+        #section1 { background-color: #DC9AF2; }
+        #section2 { background-color: #13B82E; }
+        #section3 { background-color: #DCFF16; color: black; }
+        #section4 { background-color: #FF6F61; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">About</a></li>
+            <li><a href="#section3">Services</a></li>
+            <li><a href="#section4">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="section1" class="section">Home Section</section>
+    <section id="section2" class="section">About Section</section>
+    <section id="section3" class="section">Services Section</section>
+    <section id="section4" class="section">Contact Section</section>
+</body>
+</html>
