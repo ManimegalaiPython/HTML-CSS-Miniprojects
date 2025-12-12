@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Project 5 - Admin Panel Grid</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f1f4f9;
+        }
+
+        /* ==============================
+           MAIN ADMIN GRID LAYOUT
+        ============================== */
+        .admin-grid {
+            min-height: 100vh;
+            display: grid;
+
+            /* REQUIRED FEATURE */
+            grid-template-areas:
+                "nav nav"
+                "sidebar content"
+                "footer footer";
+
+            grid-template-columns: 240px 1fr;
+            grid-template-rows: 60px 1fr 50px;
+        }
+
+        /* ==============================
+           NAVBAR
+        ============================== */
+        .nav {
+            grid-area: nav;
+            background: #222;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* ==============================
+           SIDEBAR
+        ============================== */
+        .sidebar {
+            grid-area: sidebar;
+            background: #1e1e2f;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .sidebar li:hover {
+            color: #00d4ff;
+        }
+
+        /* ==============================
+           MAIN CONTENT
+        ============================== */
+        .content {
+            grid-area: content;
+            padding: 25px;
+            background: #f8fafc;
+        }
+
+        .content h2 {
+            margin-bottom: 5px;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* ==============================
+           WIDGET GRID (NESTED GRID)
+        ============================== */
+        .widgets {
+            display: grid;
+
+            /* REQUIRED FEATURE */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .widget {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            font-weight: 600;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .widget:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+        }
+
+        /* ==============================
+           FOOTER
+        ============================== */
+        .footer {
+            grid-area: footer;
+            background: #222;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 14px;
+        }
+
+        /* ==============================
+           RESPONSIVE (SIDEBAR COLLAPSE)
+        ============================== */
+        @media (max-width: 850px) {
+            .admin-grid {
+                grid-template-areas:
+                    "nav"
+                    "content"
+                    "footer";
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 60px 1fr 50px;
+            }
+
+            .sidebar {
+                display: none; /* SIDEBAR COLLAPSE */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-grid">
+
+        <!-- NAV -->
+        <div class="nav">Admin Panel</div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Users</li>
+                <li>Analytics</li>
+                <li>Settings</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <h2>Dashboard Overview</h2>
+            <p>This is a grid-based admin panel layout with dynamic widgets.</p>
+
+            <!-- WIDGETS GRID -->
+            <div class="widgets">
+                <div class="widget">👤 Users<br>1,250</div>
+                <div class="widget">💰 Revenue<br>₹85,000</div>
+                <div class="widget">📦 Orders<br>320</div>
+                <div class="widget">📊 Performance<br>89%</div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            © 2025 Admin Panel Grid. All rights reserved.
+        </div>
+
+    </div>
+
+</body>
+</html>

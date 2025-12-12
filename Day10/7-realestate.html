@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Project 7 - Real Estate Listings Grid</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f6fb;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        /* ==========================
+           REAL ESTATE GRID
+        ========================== */
+        .listing-grid {
+            display: grid;
+
+            /* RESPONSIVE GRID */
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            /* CONSISTENT ROW HEIGHT */
+            grid-auto-rows: 280px;
+
+            gap: 20px; /* REQUIRED FEATURE */
+        }
+
+        /* ==========================
+           LISTING CARD
+        ========================== */
+        .listing-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+        }
+
+        /* LARGE FEATURED LISTING */
+        .featured {
+            grid-row: span 2; /* REQUIRED FEATURE */
+        }
+
+        .listing-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .featured img {
+            height: 260px;
+        }
+
+        .listing-content {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #27ae60;
+            margin-bottom: 6px;
+        }
+
+        .address {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            font-size: 13px;
+            color: #444;
+        }
+
+        /* ==========================
+           RESPONSIVE MOBILE
+        ========================== */
+        @media (max-width: 600px) {
+            .title {
+                font-size: 24px;
+            }
+
+            .listing-grid {
+                grid-auto-rows: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Real Estate Listings</h1>
+
+    <div class="listing-grid">
+
+        <!-- FEATURED PROPERTY -->
+        <div class="listing-card featured">
+            <img src="https://picsum.photos/500/400?random=1">
+            <div class="listing-content">
+                <div>
+                    <div class="price">₹85,00,000</div>
+                    <div class="address">Luxury Villa, Chennai</div>
+                    <div class="details">4 BHK | Swimming Pool | Garden</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NORMAL LISTINGS -->
+        <div class="listing-card">
+            <img src="https://picsum.photos/500/400?random=2">
+            <div class="listing-content">
+                <div>
+                    <div class="price">₹45,00,000</div>
+                    <div class="address">2 BHK Flat, Coimbatore</div>
+                    <div class="details">Lift | Parking | Near Metro</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing-card">
+            <img src="https://picsum.photos/500/400?random=3">
+            <div class="listing-content">
+                <div>
+                    <div class="price">₹62,00,000</div>
+                    <div class="address">3 BHK Apartment, Bangalore</div>
+                    <div class="details">Gym | Security | Balcony</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FEATURED PROPERTY -->
+        <div class="listing-card featured">
+            <img src="https://picsum.photos/500/400?random=4">
+            <div class="listing-content">
+                <div>
+                    <div class="price">₹1,20,00,000</div>
+                    <div class="address">Premium Duplex, Hyderabad</div>
+                    <div class="details">Private Parking | Smart Home</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing-card">
+            <img src="https://picsum.photos/500/400?random=5">
+            <div class="listing-content">
+                <div>
+                    <div class="price">₹38,00,000</div>
+                    <div class="address">1 BHK Flat, Trichy</div>
+                    <div class="details">New Construction | Power Backup</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing-card">
+            <img src="https://picsum.photos/500/400?random=6">
+            <div class="listing-content">
+                <div>
+                    <div class="price">₹55,00,000</div>
+                    <div class="address">2 BHK House, Madurai</div>
+                    <div class="details">Independent House | Garden</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

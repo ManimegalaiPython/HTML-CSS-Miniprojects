@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Project 8 - FAQ Section</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#2563eb;
+    --dark:#1f2937;
+    --light:#ffffff;
+    --bg:#f3f4f6;
+    --text:#6b7280;
+    --radius:12px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    padding:40px 15px;
+}
+
+/* ================= HEADER ================= */
+.title{
+    text-align:center;
+    font-size:32px;
+    font-weight:600;
+    color:var(--dark);
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:14px;
+    color:var(--text);
+    margin-bottom:40px;
+}
+
+/* ================= FAQ GRID ================= */
+.faq-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+
+    /* REQUIRED FEATURE */
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+}
+
+/* ================= FAQ ITEM ================= */
+.faq-item{
+    background:var(--light);
+    border-radius:var(--radius);
+    box-shadow:0 8px 18px rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+/* Hide checkbox */
+.faq-item input{
+    display:none;
+}
+
+/* ================= QUESTION ================= */
+.faq-label{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+    color:var(--dark);
+    transition:0.3s;
+}
+
+.faq-label:hover{
+    background:#f9fafb;
+}
+
+/* ================= ICON ================= */
+.icon{
+    font-size:18px;
+    color:var(--primary);
+    transition:0.3s;
+}
+
+/* Rotate icon when active */
+.faq-item input:checked + .faq-label .icon{
+    transform:rotate(45deg);
+}
+
+/* ================= ANSWER ================= */
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    padding:0 20px;
+    font-size:14px;
+    color:var(--text);
+    line-height:1.6;
+    transition:0.4s ease;
+}
+
+/* Show answer when checked */
+.faq-item input:checked ~ .faq-answer{
+    max-height:200px;
+    padding:0 20px 18px;
+}
+
+/* ================= MOBILE STACK ================= */
+@media(max-width:768px){
+    .faq-grid{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="title">Frequently Asked Questions</h1>
+<p class="subtitle">Find quick answers to common questions</p>
+
+<div class="faq-grid">
+
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+        <input type="checkbox" id="faq1">
+        <label class="faq-label" for="faq1">
+            What is this platform used for?
+            <span class="icon">+</span>
+        </label>
+        <div class="faq-answer">
+            This platform is designed for learning web development using structured lessons and real-world projects.
+        </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+        <input type="checkbox" id="faq2">
+        <label class="faq-label" for="faq2">
+            Do I get a certificate?
+            <span class="icon">+</span>
+        </label>
+        <div class="faq-answer">
+            Yes, certificates are provided after successful course completion.
+        </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+        <input type="checkbox" id="faq3">
+        <label class="faq-label" for="faq3">
+            Are the courses free?
+            <span class="icon">+</span>
+        </label>
+        <div class="faq-answer">
+            We offer both free and premium learning plans.
+        </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+        <input type="checkbox" id="faq4">
+        <label class="faq-label" for="faq4">
+            Can I learn on mobile?
+            <span class="icon">+</span>
+        </label>
+        <div class="faq-answer">
+            Yes, our platform is fully responsive and works on all devices.
+        </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq-item">
+        <input type="checkbox" id="faq5">
+        <label class="faq-label" for="faq5">
+            How do I track progress?
+            <span class="icon">+</span>
+        </label>
+        <div class="faq-answer">
+            Your dashboard automatically tracks your learning progress.
+        </div>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="faq-item">
+        <input type="checkbox" id="faq6">
+        <label class="faq-label" for="faq6">
+            Do you offer support?
+            <span class="icon">+</span>
+        </label>
+        <div class="faq-answer">
+            Yes, 24/7 support is available via chat and email.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

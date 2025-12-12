@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Project 6 - E-Learning Course Layout</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#2563eb;
+    --dark:#1f2937;
+    --light:#ffffff;
+    --bg:#f3f4f6;
+    --text:#6b7280;
+    --radius:14px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    padding:40px 15px;
+}
+
+/* ================= HEADER ================= */
+.title{
+    text-align:center;
+    font-size:32px;
+    font-weight:600;
+    color:var(--dark);
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:14px;
+    color:var(--text);
+    margin-bottom:40px;
+}
+
+/* ================= COURSE GRID ================= */
+.course-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+
+    /* REQUIRED FEATURE */
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+    gap:25px;
+}
+
+/* ================= COURSE CARD ================= */
+.course-card{
+    background:var(--light);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    cursor:pointer;
+}
+
+/* REQUIRED HOVER EFFECT */
+.course-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,0.15);
+}
+
+/* ================= THUMBNAIL ================= */
+.course-card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+/* ================= CONTENT ================= */
+.course-info{
+    padding:18px;
+}
+
+.course-info h3{
+    font-size:16px;
+    margin-bottom:10px;
+    color:var(--dark);
+}
+
+.course-info p{
+    font-size:13px;
+    color:var(--text);
+    margin-bottom:15px;
+}
+
+/* ================= PROGRESS BAR (NESTED FLEXBOX) ================= */
+.progress-wrapper{
+    display:flex;                  /* REQUIRED NESTED FLEXBOX */
+    align-items:center;
+    gap:10px;
+}
+
+.progress-bar{
+    flex:1;
+    height:8px;
+    background:#e5e7eb;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    background:var(--primary);
+    width:0%;
+    border-radius:10px;
+}
+
+.progress-text{
+    font-size:12px;
+    color:var(--dark);
+    font-weight:500;
+}
+
+/* ================= DIFFERENT PROGRESS VALUES ================= */
+.html  { width:85%; }
+.css   { width:70%; }
+.js    { width:55%; }
+.react { width:40%; }
+.python{ width:65%; }
+.java  { width:50%; }
+
+/* ================= MOBILE ================= */
+@media(max-width:600px){
+    .title{font-size:26px;}
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="title">E-Learning Courses</h1>
+<p class="subtitle">Track your learning progress easily</p>
+
+<div class="course-grid">
+
+    <!-- Course 1 -->
+    <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
+        <div class="course-info">
+            <h3>HTML Mastery</h3>
+            <p>Learn the basics of web structure.</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-fill html"></div>
+                </div>
+                <div class="progress-text">85%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course 2 -->
+    <div class="course-card">
+        <img src="cssimage.webp" alt="">
+        <div class="course-info">
+            <h3>CSS Styling</h3>
+            <p>Design modern responsive layouts.</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-fill css"></div>
+                </div>
+                <div class="progress-text">70%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course 3 -->
+    <div class="course-card">
+        <img src="java.webp" alt="">
+        <div class="course-info">
+            <h3>JavaScript</h3>
+            <p>Build interactive web applications.</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-fill js"></div>
+                </div>
+                <div class="progress-text">55%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course 4 -->
+    <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee" alt="">
+        <div class="course-info">
+            <h3>React.js</h3>
+            <p>Develop modern frontend applications.</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-fill react"></div>
+                </div>
+                <div class="progress-text">40%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course 5 -->
+    <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="">
+        <div class="course-info">
+            <h3>Python</h3>
+            <p>Learn backend & automation programming.</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-fill python"></div>
+                </div>
+                <div class="progress-text">65%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course 6 -->
+    <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="">
+        <div class="course-info">
+            <h3>Java</h3>
+            <p>Object oriented programming concepts.</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-fill java"></div>
+                </div>
+                <div class="progress-text">50%</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
