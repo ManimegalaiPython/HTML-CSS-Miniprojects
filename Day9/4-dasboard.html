@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Project 4 - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        /* Main Dashboard Grid */
+        .dashboard {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 60px 1fr;
+            gap: 10px;
+        }
+
+        /* Header */
+        .header {
+            grid-column: 1 / 3;
+            background: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            font-size: 22px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: #222;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            cursor: pointer;
+        }
+
+        .sidebar li:hover {
+            color: #00ffcc;
+        }
+
+        /* Main Content */
+        .main {
+            background: white;
+            padding: 20px;
+        }
+
+        .main h2 {
+            margin-bottom: 5px;
+        }
+
+        .main p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* REQUIRED FEATURE */
+            gap: 20px; /* REQUIRED FEATURE */
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: 60px auto 1fr;
+            }
+
+            .sidebar {
+                grid-column: 1 / 2;
+            }
+
+            .header {
+                grid-column: 1 / 2;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Header -->
+        <div class="header">Dashboard</div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li>🏠 Home</li>
+                <li>📊 Analytics</li>
+                <li>⚙ Settings</li>
+                <li>🚪 Logout</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <h2>Welcome to the Dashboard</h2>
+            <p>This is a responsive dashboard layout using CSS Grid.</p>
+
+            <div class="cards">
+                <div class="card">📈 Sales Report</div>
+                <div class="card">👤 User Statistics</div>
+                <div class="card">💰 Revenue</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
