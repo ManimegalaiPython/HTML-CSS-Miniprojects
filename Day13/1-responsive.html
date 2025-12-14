@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Navbar with Content</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter', sans-serif;
+}
+
+body{
+  background:#f4f6fb;
+  line-height:1.6;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#DC9AF2;
+  padding:14px 28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:700;
+}
+
+#menu-toggle{ display:none; }
+
+.menu-icon{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+
+.menu-icon span{
+  width:26px;
+  height:3px;
+  background:#000;
+}
+
+.nav-links{
+  display:flex;
+  gap:26px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#000;
+  font-weight:600;
+  position:relative;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:3px;
+  background:#13B82E;
+  transition:0.3s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+/* SECTIONS */
+section{
+  padding:70px 25px;
+}
+
+section h2{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+section p{
+  max-width:800px;
+  font-size:16px;
+}
+
+.home{ background:#fff; }
+.about{ background:#eef1ff; }
+.services{ background:#fff; }
+.contact{ background:#eef1ff; }
+
+.services ul{
+  margin-top:15px;
+  padding-left:20px;
+}
+
+.services li{
+  margin-bottom:10px;
+}
+
+.contact p{
+  margin-bottom:10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .menu-icon{ display:flex; }
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#DC9AF2;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    padding:22px 0;
+    display:none;
+  }
+
+  #menu-toggle:checked ~ .nav-links{
+    display:flex;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">MyBrand</div>
+
+  <input type="checkbox" id="menu-toggle">
+
+  <label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="home" class="home">
+  <h2>Welcome to MyBrand</h2>
+  <p>We create responsive, modern, and user-friendly websites that work seamlessly across all devices. Our focus is on clean design and performance.</p>
+</section>
+
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>MyBrand is a creative web development team dedicated to delivering high-quality digital experiences. We believe in simplicity, usability, and innovation.</p>
+</section>
+
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Responsive Web Design</li>
+    <li>HTML, CSS & JavaScript Development</li>
+    <li>UI / UX Design</li>
+    <li>Website Maintenance & Support</li>
+  </ul>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: contact@mybrand.com</p>
+  <p>Phone: +91 98765 43210</p>
+  <p>Location: India</p>
+</section>
+
+</body>
+</html>

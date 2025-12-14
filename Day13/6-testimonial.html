@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Testimonial Slider</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      padding: 50px 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Inika', serif;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+
+    /* Slider Container */
+    .slider-container {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .slider-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    .slider-container::-webkit-scrollbar-thumb {
+      background: #DC9AF2;
+      border-radius: 4px;
+    }
+
+    /* Individual Testimonial Card */
+    .testimonial-card {
+      background: #fff;
+      flex: 0 0 300px; /* default card width */
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      scroll-snap-align: start;
+      transition: transform 0.3s;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* Responsive widths */
+    @media (min-width: 768px) {
+      .testimonial-card {
+        flex: 0 0 45%; /* show 2 cards on tablet */
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .testimonial-card {
+        flex: 0 0 30%; /* show 3 cards on desktop */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>What Our Customers Say</h1>
+
+  <div class="slider-container">
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer 1">
+      <h3>Jane Doe</h3>
+      <p>"This product completely transformed the way our team works. Highly recommended!"</p>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer 2">
+      <h3>John Smith</h3>
+      <p>"Excellent customer service and easy-to-use tools. It’s a must-have for businesses."</p>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="Customer 3">
+      <h3>Emily Clark</h3>
+      <p>"I love how intuitive everything is. Saved me hours every week."</p>
+    </div>
+
+    <!-- Testimonial 4 -->
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Customer 4">
+      <h3>Michael Brown</h3>
+      <p>"The features are exactly what we needed. Support team is also fantastic."</p>
+    </div>
+  </div>
+
+</body>
+</html>
