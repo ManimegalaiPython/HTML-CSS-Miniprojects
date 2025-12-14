@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Project 4 - Animated Skill Bars</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background:#f4f6fb;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.skills-box{
+    width:90%;
+    max-width:500px;
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+.skills-box h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.skill{
+    margin-bottom:20px;
+}
+
+.skill-name{
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.progress{
+    width:100%;
+    height:16px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0;
+    border-radius:20px;
+    transition:width 2s ease;
+}
+
+.html{ background:#e44d26; }
+.css{ background:#264de4; }
+.js{ background:#f7df1e; }
+
+.skills-box.show .html{ width:90%; }
+.skills-box.show .css{ width:80%; }
+.skills-box.show .js{ width:70%; }
+
+</style>
+</head>
+<body>
+
+<section></section> <!-- Spacer -->
+
+<section>
+    <div class="skills-box" id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="progress">
+                <div class="progress-bar html"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">CSS</div>
+            <div class="progress">
+                <div class="progress-bar css"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">JavaScript</div>
+            <div class="progress">
+                <div class="progress-bar js"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+const skills = document.getElementById('skills');
+
+window.addEventListener('scroll', () => {
+    const boxTop = skills.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if(boxTop < windowHeight - 100){
+        skills.classList.add('show');
+    }
+});
+</script>
+
+</body>
+</html>

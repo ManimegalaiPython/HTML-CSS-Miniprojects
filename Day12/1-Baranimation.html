@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Project 1 - Progress Bar Animation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Inter', sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#f4f6fb;
+        }
+
+        .progress-container{
+            width:350px;
+            background:#fff;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .progress-title{
+            font-size:18px;
+            font-weight:600;
+            margin-bottom:15px;
+            text-align:center;
+        }
+
+        .progress-bar{
+            width:100%;
+            height:18px;
+            background:#e0e0e0;
+            border-radius:30px;
+            overflow:hidden;
+        }
+
+        .progress-fill{
+            height:100%;
+            width:0%;
+            background:linear-gradient(90deg,#6a5af9,#8e7bff);
+            border-radius:30px;
+            animation:load 4s ease-in-out forwards;
+        }
+
+        @keyframes load{
+            from{
+                width:0%;
+            }
+            to{
+                width:75%;
+            }
+        }
+
+        .percentage{
+            margin-top:10px;
+            text-align:right;
+            font-size:14px;
+            font-weight:600;
+            color:#555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-container">
+        <div class="progress-title">Project Progress</div>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <div class="percentage">75%</div>
+    </div>
+
+</body>
+</html>

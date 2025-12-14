@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Project 6 - Animated Loading Spinners</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f6fb;
+}
+
+.container{
+    display:flex;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+/* ===== Circle Spinner ===== */
+.circle-spinner{
+    width:60px;
+    height:60px;
+    border:6px solid #ddd;
+    border-top:6px solid #2196f3;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+/* ===== Dots Spinner ===== */
+.dots-spinner{
+    display:flex;
+    gap:8px;
+}
+
+.dots-spinner span{
+    width:14px;
+    height:14px;
+    background:#4caf50;
+    border-radius:50%;
+    animation:bounce 1.2s infinite ease-in-out;
+}
+
+.dots-spinner span:nth-child(2){ animation-delay:0.2s; }
+.dots-spinner span:nth-child(3){ animation-delay:0.4s; }
+
+/* ===== Bars Spinner ===== */
+.bars-spinner{
+    display:flex;
+    gap:6px;
+}
+
+.bars-spinner span{
+    width:8px;
+    height:35px;
+    background:#f44336;
+    animation:stretch 1s infinite ease-in-out;
+}
+
+.bars-spinner span:nth-child(2){ animation-delay:0.1s; }
+.bars-spinner span:nth-child(3){ animation-delay:0.2s; }
+.bars-spinner span:nth-child(4){ animation-delay:0.3s; }
+
+/* Animations */
+@keyframes spin{
+    0%{ transform:rotate(0deg); }
+    100%{ transform:rotate(360deg); }
+}
+
+@keyframes bounce{
+    0%,80%,100%{ transform:scale(0); }
+    40%{ transform:scale(1); }
+}
+
+@keyframes stretch{
+    0%,40%,100%{ transform:scaleY(0.4); }
+    20%{ transform:scaleY(1); }
+}
+
+.label{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.loader-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="loader-box">
+        <div class="circle-spinner"></div>
+        <div class="label">Circle</div>
+    </div>
+
+    <div class="loader-box">
+        <div class="dots-spinner">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="label">Dots</div>
+    </div>
+
+    <div class="loader-box">
+        <div class="bars-spinner">
+            <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="label">Bars</div>
+    </div>
+
+</div>
+
+</body>
+</html>

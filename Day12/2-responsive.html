@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Project 2 - Responsive Landing Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') center/cover no-repeat;
+}
+
+/* Overlay */
+.overlay{
+    min-height:100vh;
+    background:rgba(0,0,0,0.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Glass Card */
+.container{
+    width:90%;
+    max-width:900px;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+    color:#fff;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#fff;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#DCFF16;
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:16px;
+    opacity:0.9;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 28px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary{
+    background:#DCFF16;
+    color:#000;
+}
+
+.btn-secondary{
+    background:transparent;
+    color:#fff;
+    border:2px solid #fff;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Tooltip */
+.tooltip{
+    position:relative;
+}
+
+.tooltip span{
+    position:absolute;
+    bottom:120%;
+    left:50%;
+    transform:translateX(-50%);
+    background:#000;
+    padding:6px 10px;
+    border-radius:6px;
+    font-size:12px;
+    opacity:0;
+    pointer-events:none;
+    transition:0.3s;
+}
+
+.tooltip:hover span{
+    opacity:1;
+}
+
+/* Modal */
+#modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+#modal:target{
+    display:flex;
+}
+
+.modal-content{
+    background:#fff;
+    color:#000;
+    padding:30px;
+    border-radius:16px;
+    width:90%;
+    max-width:400px;
+    animation:popup 0.5s ease;
+}
+
+@keyframes popup{
+    from{transform:scale(0.7);opacity:0;}
+    to{transform:scale(1);opacity:1;}
+}
+
+.modal-content a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    color:#fff;
+    background:#13B82E;
+    padding:10px 20px;
+    border-radius:20px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="overlay">
+    <div class="container">
+        <header>
+            <div class="logo">TechNova</div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Build Faster. Launch Smarter.</h1>
+            <p>Modern landing page with animations, glassmorphism, and responsive design.</p>
+
+            <div class="buttons">
+                <a href="#modal"><button class="btn btn-primary">Get Started</button></a>
+
+                <div class="tooltip">
+                    <button class="btn btn-secondary">Learn More</button>
+                    <span>Explore features</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modal">
+    <div class="modal-content">
+        <h3>Welcome!</h3>
+        <p>This is an animated modal using only HTML & CSS.</p>
+        <a href="#">Close</a>
+    </div>
+</div>
+
+</body>
+</html>

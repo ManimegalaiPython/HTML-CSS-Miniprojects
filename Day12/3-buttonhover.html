@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Project 3 - Button Hover Effects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4facfe,#43e97b);
+}
+
+.button-container{
+    background:rgba(255,255,255,0.15);
+    padding:30px;
+    border-radius:16px;
+    display:flex;
+    gap:20px;
+    backdrop-filter:blur(10px);
+}
+
+.btn{
+    padding:14px 26px;
+    border:none;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:600;
+    color:#fff;
+    cursor:pointer;
+    transition:transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover{
+    transform:scale(1.12);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+.primary{
+    background:#2196f3;
+}
+
+.primary:hover{
+    background:#1976d2;
+}
+
+.secondary{
+    background:#4caf50;
+}
+
+.secondary:hover{
+    background:#388e3c;
+}
+
+.danger{
+    background:#f44336;
+}
+
+.danger:hover{
+    background:#d32f2f;
+}
+
+.warning{
+    background:#ff9800;
+}
+
+.warning:hover{
+    background:#f57c00;
+}
+
+@media(max-width:600px){
+    .button-container{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="button-container">
+    <button class="btn primary">Primary Button</button>
+    <button class="btn secondary">Secondary Button</button>
+    <button class="btn danger">Danger Button</button>
+    <button class="btn warning">Warning Button</button>
+</div>
+
+</body>
+</html>
